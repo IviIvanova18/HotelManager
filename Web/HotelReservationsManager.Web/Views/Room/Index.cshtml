@@ -1,0 +1,69 @@
+﻿@model IEnumerable<HotelReservationsManager.Web.Model.Views.Room.RoomHomeViewModel>
+
+@{
+    ViewData["Title"] = "ListRoom";
+}
+<div class-m3>
+    <h1 class="text-center">All Rooms </h1>
+    <hr class="bg-secondary half-width hr-2" />
+</div>
+
+<p><a asp-controller="Room" asp-action="Create" class="btn btn-danger">Create New Room </a>  </p>
+
+
+<table class="table">
+    <thead>
+        <tr>
+
+            <th>
+                @Html.DisplayNameFor(model => model.Capacity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Type)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsFree)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PriceForAdult)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PriceForChild)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RoomNumber)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Capacity)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Type)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IsFree)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PriceForAdult)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PriceForChild)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.RoomNumber)
+                </td>
+                <td>
+                    <a asp-controller="Room" asp-action="EditRoom" asp-route-id="@item.Id" class="btn btn-success"> Edit</a>
+                    <a asp-controller="Room" asp-action="DeleteRoom" asp-route-id="@item.Id" class="btn btn-danger"> Delete</a>
+
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

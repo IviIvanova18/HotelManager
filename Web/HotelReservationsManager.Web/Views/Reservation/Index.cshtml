@@ -1,0 +1,78 @@
+﻿@model IEnumerable<HotelReservationsManager.Web.Model.Views.Reservation.ReservationViewModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+<h1 class="text-center">All Reservations </h1>
+<hr class="bg-secondary half-width hr-2" />
+<p><a asp-controller="Reservation" asp-action="Create" class="btn btn-danger">Create New Reservation </a> </p>
+
+
+<table class="table">
+    <thead>
+        <tr>
+
+            <th>
+                @Html.DisplayNameFor(model => model.RoomNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UserId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateOfAccommodation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ReleaseDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Breakfast)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AllInclusive)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Price)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.RoomNumber)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UserId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DateOfAccommodation)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ReleaseDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Breakfast)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AllInclusive)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Price)
+                </td>
+
+               
+                <td>
+                    <a asp-controller="Reservation" asp-action="EditReservation" asp-route-id="@item.Id" class="btn btn-success"> Edit</a>
+                    <a asp-controller="Reservation" asp-action="DeleteReservation" asp-route-id="@item.Id" class="btn btn-danger"> Delete</a>
+
+                </td>
+
+            </tr>
+        }
+    </tbody>
+</table>

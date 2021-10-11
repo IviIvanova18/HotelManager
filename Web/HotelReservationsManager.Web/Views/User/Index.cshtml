@@ -1,0 +1,64 @@
+﻿@model IEnumerable<HotelReservationsManager.Web.Model.Views.User.EmployeeViewModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class-m3>
+    <h1 class="text-center">All Employees </h1>
+    <hr class="bg-secondary half-width hr-2" />
+</div>
+
+<p> <a class="btn btn-danger" asp-area="Identity" asp-page="/Account/Register">Register New Employee</a>  </p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MiddleName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Surname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EGN)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateOfAppointment)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateOfDismissal)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FirstName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MiddleName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Surname)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EGN)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DateOfAppointment)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DateOfDismissal)
+                </td>
+                
+            </tr>
+        }
+    </tbody>
+</table>

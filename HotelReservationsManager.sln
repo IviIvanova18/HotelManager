@@ -1,0 +1,64 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29613.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{90369831-D5B1-4012-9D96-9DA11A7B6F79}"
+	ProjectSection(SolutionItems) = preProject
+		Data\HotelReservationsManager.Data.Models\User.cs = Data\HotelReservationsManager.Data.Models\User.cs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{D58B56CE-F504-49A8-B7FF-B5BDD6D9BFF5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{5FA894FE-B097-4098-84C0-C7ED94EF0C2D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotelReservationsManager.Web", "Web\HotelReservationsManager.Web\HotelReservationsManager.Web.csproj", "{55F6D695-9F79-4A80-9EAA-0AA8F5C21AB6}"
+	ProjectSection(ProjectDependencies) = postProject
+		{3FEE8598-5523-458E-BA84-C838B7E786D0} = {3FEE8598-5523-458E-BA84-C838B7E786D0}
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotelReservationsManager.Web.Model", "Web\HotelReservationsManager.Web.Model\HotelReservationsManager.Web.Model.csproj", "{3FEE8598-5523-458E-BA84-C838B7E786D0}"
+	ProjectSection(ProjectDependencies) = postProject
+		{F79F8015-489E-4A6B-A859-A3CD6E719A63} = {F79F8015-489E-4A6B-A859-A3CD6E719A63}
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotelReservationsManager.Data", "Data\HotelReservationsManager.Data\HotelReservationsManager.Data.csproj", "{F79F8015-489E-4A6B-A859-A3CD6E719A63}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotelReservationsManager.Data.Models", "Data\HotelReservationsManager.Data.Models\HotelReservationsManager.Data.Models.csproj", "{6876DE66-08A1-400A-BAB2-5AA375B348BB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{55F6D695-9F79-4A80-9EAA-0AA8F5C21AB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55F6D695-9F79-4A80-9EAA-0AA8F5C21AB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55F6D695-9F79-4A80-9EAA-0AA8F5C21AB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55F6D695-9F79-4A80-9EAA-0AA8F5C21AB6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3FEE8598-5523-458E-BA84-C838B7E786D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FEE8598-5523-458E-BA84-C838B7E786D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FEE8598-5523-458E-BA84-C838B7E786D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FEE8598-5523-458E-BA84-C838B7E786D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F79F8015-489E-4A6B-A859-A3CD6E719A63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F79F8015-489E-4A6B-A859-A3CD6E719A63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F79F8015-489E-4A6B-A859-A3CD6E719A63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F79F8015-489E-4A6B-A859-A3CD6E719A63}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6876DE66-08A1-400A-BAB2-5AA375B348BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6876DE66-08A1-400A-BAB2-5AA375B348BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6876DE66-08A1-400A-BAB2-5AA375B348BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6876DE66-08A1-400A-BAB2-5AA375B348BB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{55F6D695-9F79-4A80-9EAA-0AA8F5C21AB6} = {90369831-D5B1-4012-9D96-9DA11A7B6F79}
+		{3FEE8598-5523-458E-BA84-C838B7E786D0} = {90369831-D5B1-4012-9D96-9DA11A7B6F79}
+		{F79F8015-489E-4A6B-A859-A3CD6E719A63} = {D58B56CE-F504-49A8-B7FF-B5BDD6D9BFF5}
+		{6876DE66-08A1-400A-BAB2-5AA375B348BB} = {D58B56CE-F504-49A8-B7FF-B5BDD6D9BFF5}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9F722865-D0DD-4558-93FC-FF8FF63DD58A}
+	EndGlobalSection
+EndGlobal

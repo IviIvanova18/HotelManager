@@ -1,0 +1,55 @@
+﻿@model HotelReservationsManager.Web.Model.Views.Room.RoomEditCommonModel
+
+@{
+    ViewData["Title"] = "EditRoom";
+}
+
+<h1>EditRoom</h1>
+
+<h4>RoomEditCommonModel</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Capacity" class="control-label"></label>
+                <input asp-for="Capacity" class="form-control" value="@Model.Capacity" />
+                <span asp-validation-for="Capacity" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Type" class="control-label"></label>
+                <input asp-for="Type" class="form-control" value="@Model.Type"/>
+                <span asp-validation-for="Type" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="IsFree" value="@Model.IsFree" /> @Html.DisplayNameFor(model => model.IsFree)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="PriceForAdult" class="control-label"></label>
+                <input asp-for="PriceForAdult" class="form-control" value="@Model.PriceForAdult" />
+                <span asp-validation-for="PriceForAdult" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PriceForChild" class="control-label"></label>
+                <input asp-for="PriceForChild" class="form-control" value="@Model.PriceForChild"/>
+                <span asp-validation-for="PriceForChild" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RoomNumber" class="control-label"></label>
+                <input asp-for="RoomNumber" class="form-control" value="@Model.RoomNumber"/>
+                <span asp-validation-for="RoomNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
